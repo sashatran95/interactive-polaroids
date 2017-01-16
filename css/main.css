@@ -13,8 +13,7 @@ html {
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
 
-  top: 10%;
-  left: 10%;
+  transition: all 500ms linear;
 }
 
 .polaroid > img {
@@ -44,6 +43,8 @@ html {
   transform: rotate(-10deg) translate(111px, 100px);
   z-index: 1;
   position: absolute;
+  top: 100px;
+  left: 20%;
 
 }
 
@@ -51,6 +52,8 @@ html {
   transform: rotate(5deg) translate(200px, 115px);
   z-index: 300;
   position: absolute;
+  top: 150px;
+  left: 30%;
 
 }
 
@@ -58,26 +61,26 @@ html {
   transform: rotate(25deg) translate(280px, -40px);
   z-index: 1;
   position: absolute;
+  top: 100px;
+  left: 40%;
 
 }
 
 .polaroid:hover {
   z-index: 100;
-  transform: rotate(0deg) transition: all 500ms linear;;
+  transform: rotate(0deg); 
+  animation: fade 1s linear infinite alternate;
 
 }
 
 @keyframes pulse {
 
   0% {
-    opacity: .2;
-    transform: scale(.7) rotate(45deg);
-
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
   }
 
   100% {
-    opacity: 1;
-    transform: scale(1) rotate(45deg);
-  }
+    transform: rotate(0deg);
+    box-shadow: 7px 10px 12px rgba(0, 0, 0, .5);
 
 }
